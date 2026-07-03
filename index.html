@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simon Clubley &middot; Your 100 Leads for The Wow Factory Kent LTD</title>
+<link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=dopaminedigital.io&amp;sz=64">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a12;
+  --card: #13132a;
+  --card-2: #1a1a35;
+  --border: rgba(255,255,255,0.08);
+  --accent: #8b5cf6;
+  --accent-bright: #a78bfa;
+  --green: #22c55e;
+  --green-bright: #4ade80;
+  --green-border: rgba(34,197,94,0.28);
+  --text: #f0f0f5;
+  --text-2: #cbcbe0;
+  --text-3: #9898b4;
+  --radius: 18px;
+  --gradient: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 50%, #a78bfa 100%);
+  --gradient-green: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+  scroll-behavior: smooth;
+}
+:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; border-radius: 6px; }
+
+.ambient { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.ambient .orb { position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.16; will-change: transform; }
+.ambient .orb:nth-child(1) { width: 700px; height: 700px; background: #7c3aed; top: -250px; left: -150px; animation: drift-a 28s ease-in-out infinite alternate; }
+.ambient .orb:nth-child(2) { width: 520px; height: 520px; background: #22c55e; bottom: -200px; right: -100px; opacity: 0.08; animation: drift-b 34s ease-in-out infinite alternate; }
+@keyframes drift-a { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(80px,40px,0) scale(1.08); } }
+@keyframes drift-b { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(-60px,-50px,0) scale(1.1); } }
+
+.section { opacity: 0; transform: translateY(18px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.section.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .ambient .orb { animation: none; }
+  .section { opacity: 1; transform: none; transition: none; }
+  .mega-btn, .mega-btn::before, .cta-box, .cta-box::after, .cta-book, .cta-book::before { animation: none; }
+  .stagger > * { opacity: 1; transform: none; transition: none; }
+  .scroll-cue svg { animation: none; }
+  html, body { scroll-behavior: auto; }
+}
+
+/* scroll cue under the hero */
+.scroll-cue { display: inline-flex; flex-direction: column; align-items: center; gap: 5px; margin-top: 30px; color: var(--text-3); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color 0.15s ease; }
+.scroll-cue svg { stroke: var(--accent-bright); animation: cue-bounce 1.8s ease-in-out infinite; }
+.scroll-cue:hover { color: var(--text); }
+@keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* card hover polish */
+.cs-card, .testi { transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.cs-card:hover, .testi:hover { transform: translateY(-4px); border-color: rgba(139,92,246,0.4); box-shadow: 0 14px 34px rgba(0,0,0,0.3); }
+.cs-video img { transition: transform 0.4s ease; }
+.cs-card:hover .cs-video img { transform: scale(1.04); }
+
+.header.section { margin-top: 0; }
+
+.wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 88px 32px 80px; }
+.section { margin-top: 44px; }
+
+h1, h2, h3 { font-family: 'Inter', sans-serif; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; }
+h1 { font-size: clamp(34px, 4.6vw, 50px); margin-bottom: 16px; text-wrap: balance; }
+h2 { font-size: clamp(24px, 2.8vw, 31px); margin-bottom: 12px; text-wrap: balance; }
+h3 { font-size: 16px; margin-bottom: 4px; }
+p { color: var(--text-2); }
+strong { color: var(--text); font-weight: 700; }
+
+.gradient-text { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.gradient-text-green { background: var(--gradient-green); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ───── HEADER ───── */
+.header { text-align: center; }
+.eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-bright); background: rgba(139,92,246,0.10); border: 1px solid rgba(139,92,246,0.28); padding: 6px 14px; border-radius: 999px; margin-bottom: 22px; }
+.header .lede { font-size: 18px; color: var(--text-2); max-width: 620px; margin: 0 auto; }
+.header .lede strong { color: var(--green-bright); }
+.meta { margin-top: 16px; font-size: 14px; color: var(--text-3); }
+
+/* ───── MEGA DOWNLOAD BUTTON ───── */
+.mega-btn { position: relative; overflow: hidden; display: block; width: 100%; max-width: 72%; margin: 32px auto 0; text-align: center; text-decoration: none; color: #04240f; border-radius: 18px; padding: 30px 28px; border: 1px solid rgba(255,255,255,0.22); border-top-color: rgba(255,255,255,0.5); background: linear-gradient(120deg, #15a043 0%, #22c55e 32%, #5ef08a 50%, #22c55e 68%, #15a043 100%); background-size: 220% 100%; box-shadow: 0 14px 44px rgba(34,197,94,0.34), inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -16px 28px rgba(4,40,15,0.28); animation: mega-glow 2.8s ease-in-out infinite, mega-gradient 6s ease infinite; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.mega-btn:hover { transform: translateY(-3px) scale(1.012); box-shadow: 0 24px 66px rgba(34,197,94,0.6), inset 0 2px 0 rgba(255,255,255,0.6), inset 0 -16px 28px rgba(4,40,15,0.3); }
+.mega-btn:active { transform: translateY(-1px) scale(0.998); }
+.mega-btn::before { content: ""; position: absolute; top: 0; left: -65%; width: 55%; height: 100%; background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%); transform: skewX(-20deg); animation: mega-shine 3.6s ease-in-out infinite; pointer-events: none; }
+.mega-btn > * { position: relative; z-index: 1; }
+@keyframes mega-shine { 0% { left: -65%; } 60% { left: 135%; } 100% { left: 135%; } }
+@keyframes mega-glow { 0%, 100% { box-shadow: 0 14px 44px rgba(34,197,94,0.30), inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -16px 28px rgba(4,40,15,0.28); } 50% { box-shadow: 0 20px 64px rgba(34,197,94,0.6), inset 0 2px 0 rgba(255,255,255,0.55), inset 0 -16px 28px rgba(4,40,15,0.3); } }
+@keyframes mega-gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.mega-btn .mb-top { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; }
+.mega-btn .mb-sub { font-size: 14px; font-weight: 600; opacity: 0.82; margin-top: 4px; }
+.mega-btn .mb-value { font-weight: 700; opacity: 0.7; font-size: 0.78em; }
+
+/* ───── SUMMARY ───── */
+.summary-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 26px; }
+@media (max-width: 600px) { .stat-row { grid-template-columns: 1fr; } }
+.stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+.stat .s-label { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-3); }
+.stat .s-num { font-size: 38px; font-weight: 900; letter-spacing: -0.03em; margin: 2px 0; }
+.stat .s-num.green { color: var(--green-bright); }
+.stat .s-num.purple { color: var(--accent-bright); }
+.stat .s-sub { font-size: 13.5px; color: var(--text-3); }
+
+.block-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-bright); margin: 26px 0 10px; }
+.icp-list { list-style: none; display: grid; gap: 11px; }
+.icp-list li { position: relative; padding-left: 28px; color: var(--text-2); }
+.icp-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green-bright); font-weight: 800; }
+.source-tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--text-3); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 4px 10px; border-radius: 999px; margin-top: 14px; }
+
+.value-line { background: linear-gradient(180deg, rgba(34,197,94,0.07) 0%, rgba(34,197,94,0.02) 100%); border: 1px solid var(--green-border); border-radius: 14px; padding: 18px 20px; margin-top: 26px; font-size: 15.5px; }
+.value-line strong { color: var(--green-bright); }
+
+.enrich-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .enrich-grid { grid-template-columns: 1fr; } }
+.enrich { display: flex; gap: 14px; align-items: flex-start; background: linear-gradient(160deg, rgba(139,92,246,0.12) 0%, rgba(139,92,246,0.03) 100%); border: 1px solid rgba(139,92,246,0.22); border-radius: 15px; padding: 18px 18px; transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
+.enrich:hover { transform: translateY(-3px); border-color: rgba(139,92,246,0.5); box-shadow: 0 14px 34px rgba(124,58,237,0.18); }
+.enrich .e-dot { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--gradient); border: none; box-shadow: none; font-size: 20px; }
+.enrich .e-title { font-size: 15px; font-weight: 700; color: var(--text); display: inline-flex; align-items: center; gap: 8px; }
+.ai-chip { font-size: 9.5px; font-weight: 800; letter-spacing: 0.07em; padding: 2px 8px; border-radius: 999px; background: transparent; border: 1px solid var(--accent); color: var(--accent-bright); }
+.enrich .e-sub { font-size: 13px; color: var(--text-3); margin-top: 2px; }
+
+/* ───── GODFATHER OFFER ───── */
+.godfather { text-align: center; background: linear-gradient(160deg, rgba(139,92,246,0.13) 0%, var(--card) 58%); border: 1px solid rgba(139,92,246,0.35); border-radius: 22px; padding: 48px 40px 72px; box-shadow: 0 0 70px rgba(124,58,237,0.10); }
+.gf-eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-bright); background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.3); padding: 6px 16px; border-radius: 999px; margin-bottom: 18px; }
+.gf-summary { max-width: 820px; margin: 0 auto; font-size: 17px; }
+.gf-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px; max-width: 800px; margin: 30px auto 0; text-align: left; }
+@media (max-width: 640px) { .gf-benefits { grid-template-columns: 1fr; } }
+.gf-benefit { position: relative; padding-left: 30px; color: var(--text-2); font-size: 15px; }
+.gf-benefit::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green-bright); font-weight: 800; }
+.gf-benefit strong { color: var(--text); }
+.learn-box { background: linear-gradient(160deg, rgba(139,92,246,0.08) 0%, var(--card) 60%); border: 1px solid rgba(139,92,246,0.22); border-radius: 22px; padding: 40px 34px 44px; text-align: center; }
+.proof-box { background: rgba(255,255,255,0.015); border: 1px solid var(--border); border-radius: 22px; padding: 44px 34px 50px; }
+.proof-head-spaced { margin-top: 54px; }
+.learn-more-head { text-align: center; margin-top: 0; margin-bottom: 0; }
+.gf-links { display: flex; gap: 18px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-top: 28px; }
+.gf-link { display: flex; flex-direction: column; align-items: center; gap: 9px; flex: 1 1 230px; max-width: 320px; }
+.gf-link .btn { width: 100%; justify-content: center; }
+.gf-stat { font-size: 12.5px; font-weight: 600; color: var(--text-3); }
+.gf-stat strong { color: var(--green-bright); }
+.btn-yt { background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border); }
+.btn-yt:hover { transform: translateY(-2px); border-color: rgba(255,0,0,0.5); }
+.btn-yt .yt-glyph { display: inline-grid; place-items: center; width: 26px; height: 18px; background: #ff0000; border-radius: 5px; }
+.btn-yt .yt-glyph::after { content: ""; width: 0; height: 0; border-left: 7px solid #fff; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; margin-left: 1px; }
+.btn-skool { background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border); }
+.btn-skool:hover { transform: translateY(-2px); border-color: rgba(255,204,0,0.6); }
+.btn-skool .sk-logo { width: 22px; height: 22px; border-radius: 6px; display: inline-block; vertical-align: middle; }
+.btn-ghost .dd-logo { width: 22px; height: 22px; border-radius: 6px; display: inline-block; vertical-align: middle; }
+
+/* ───── SOCIAL PROOF / CASE STUDIES ───── */
+.proof-head { text-align: center; }
+.cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+@media (max-width: 760px) { .cs-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; } }
+.cs-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+.cs-video { position: relative; display: block; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; }
+.cs-video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt-play { position: absolute; inset: 0; margin: auto; width: 60px; height: 42px; background: #ff0000; border-radius: 11px; display: grid; place-items: center; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
+.yt-play::after { content: ""; width: 0; height: 0; border-left: 16px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 3px; }
+.cs-headline { font-size: 16px; font-weight: 700; color: var(--text); margin: 16px 0 8px; line-height: 1.32; }
+.cs-desc { font-size: 14px; color: var(--text-3); }
+.cs-checks { list-style: none; margin-top: 14px; display: grid; gap: 9px; }
+.cs-checks li { position: relative; padding-left: 26px; font-size: 14px; color: var(--text-2); }
+.cs-checks li::before { content: "✓"; position: absolute; left: 0; top: -1px; color: var(--green-bright); font-weight: 800; font-size: 15px; }
+.cs-note { margin-top: 18px; background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.22); border-radius: 14px; padding: 20px 28px; text-align: center; font-size: 15px; color: var(--text-2); }
+.cs-note strong { color: var(--accent-bright); }
+
+/* ───── CTA BOX ───── */
+.cta-box { position: relative; overflow: hidden; text-align: center; background: linear-gradient(160deg, rgba(139,92,246,0.22) 0%, rgba(124,58,237,0.08) 52%, var(--card) 100%); border: 1px solid rgba(139,92,246,0.5); border-radius: var(--radius); padding: 50px 34px; animation: cta-pulse 5s ease-in-out infinite; }
+.cta-box > * { position: relative; z-index: 1; }
+.cta-box::after { content: ""; position: absolute; top: 0; left: -35%; width: 35%; height: 100%; background: linear-gradient(100deg, transparent, rgba(167,139,250,0.12), transparent); transform: skewX(-18deg); animation: cta-sheen 8s ease-in-out infinite; pointer-events: none; z-index: 0; }
+@keyframes cta-sheen { 0% { left: -35%; } 55% { left: 130%; } 100% { left: 130%; } }
+@keyframes cta-pulse { 0%, 100% { box-shadow: 0 0 60px rgba(124,58,237,0.08); } 50% { box-shadow: 0 0 95px rgba(124,58,237,0.2); } }
+.cta-book { position: relative; overflow: hidden; justify-content: center; font-size: 22px; padding: 30px 48px; min-width: 480px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.22); border-top-color: rgba(255,255,255,0.45); box-shadow: 0 14px 40px rgba(124,58,237,0.5), inset 0 2px 0 rgba(255,255,255,0.4), inset 0 -16px 28px rgba(40,10,80,0.32); animation: book-glow 2.8s ease-in-out infinite; }
+@media (max-width: 520px) { .cta-book { width: 100%; padding: 18px 28px; font-size: 16px; } }
+.cta-book span { position: relative; z-index: 1; }
+.cta-book::before { content: ""; position: absolute; top: 0; left: -65%; width: 55%; height: 100%; background: linear-gradient(100deg, transparent, rgba(255,255,255,0.42), transparent); transform: skewX(-20deg); animation: book-shine 3.6s ease-in-out infinite; pointer-events: none; }
+@keyframes book-shine { 0% { left: -65%; } 60% { left: 135%; } 100% { left: 135%; } }
+@keyframes book-glow { 0%, 100% { box-shadow: 0 14px 40px rgba(124,58,237,0.45), inset 0 2px 0 rgba(255,255,255,0.4), inset 0 -16px 28px rgba(40,10,80,0.32); } 50% { box-shadow: 0 18px 56px rgba(124,58,237,0.66), inset 0 2px 0 rgba(255,255,255,0.45), inset 0 -16px 28px rgba(40,10,80,0.34); } }
+.cta-box .cb-eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 14px; }
+.cta-box p { max-width: 780px; margin: 0 auto; }
+.cta-box .cb-offer { color: var(--text); font-weight: 600; }
+.cta-proof { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px; font-size: 14px; color: var(--text-3); flex-wrap: wrap; }
+.cta-proof .cta-stars { color: #fbbf24; letter-spacing: 2px; font-size: 16px; }
+.cta-proof strong { color: var(--text); }
+.cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; padding: 16px 28px; border-radius: 14px; text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.btn-primary { background: var(--gradient); color: #fff; box-shadow: 0 8px 30px rgba(124,58,237,0.35); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 38px rgba(124,58,237,0.45); }
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-ghost:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.22); }
+.cta-or { font-size: 13px; color: var(--text-3); margin-top: 14px; }
+.cta-or strong { color: var(--text); font-weight: 700; }
+.cta-or .voucher-amt { color: var(--green-bright); font-weight: 800; }
+.cta-or .amzn-logo { width: 16px; height: 16px; border-radius: 3px; vertical-align: -3px; margin: 0 2px; }
+
+/* headings balance nicely; body text flows naturally (pretty avoids orphans without pyramids) */
+h1, h2 { text-wrap: balance; }
+
+/* ───── mobile ───── */
+@media (max-width: 600px) {
+  .wrap { padding: 56px 16px 96px; }
+  .section { margin-top: 32px; }
+  h1 { font-size: 25px; line-height: 1.22; }
+  h2 { font-size: 21px; line-height: 1.25; }
+  h3 { font-size: 15px; }
+  .header .lede { font-size: 15px; }
+  .summary-card, .godfather, .cta-box, .proof-box, .learn-box { padding: 26px 18px; }
+  .godfather { padding-bottom: 40px; }
+  .leads-card { padding: 22px 16px; }
+  .summary-card > p, .icp-list li, .value-line { font-size: 14px; }
+  .mega-btn { padding: 22px 16px; max-width: 100%; }
+  .mega-btn .mb-top { font-size: 16px; }
+  .mega-btn .mb-value { font-size: 0.78em; }
+  .mega-btn .mb-sub { font-size: 12.5px; }
+  .stat .s-num { font-size: 30px; }
+  .gf-summary { font-size: 14.5px; }
+  .gf-benefit { font-size: 14px; }
+  .gf-benefits { gap: 14px; }
+  .gf-links { gap: 14px; }
+  .cs-headline { font-size: 15px; }
+  .testi-quote { font-size: 13.5px; }
+  .cta-book { width: 100%; min-width: 0; padding: 18px 24px; font-size: 16px; }
+  .cta-proof { font-size: 13px; }
+  .proof-sub { font-size: 14.5px; }
+}
+
+.mega-btn .mb-emoji { margin-right: 8px; }
+/* mobile sticky CTA (with solid backing strip) */
+.sticky-bar { display: none; }
+@media (max-width: 700px) {
+  .sticky-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: block; padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); background: rgba(10,10,18,0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(139,92,246,0.25); box-shadow: 0 -10px 30px rgba(0,0,0,0.45); transform: translateY(120%); transition: transform 0.3s ease; }
+  .sticky-bar.show { transform: translateY(0); }
+  .sticky-cta { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 15px; border-radius: 13px; background: var(--gradient); color: #fff; font-weight: 800; font-size: 16px; text-decoration: none; box-shadow: 0 8px 24px rgba(124,58,237,0.5); }
+}
+@media (prefers-reduced-motion: reduce) { .sticky-bar { transition: none; } }
+
+/* full-width AI signals strip (same look/size as the value-line, one row) */
+.ai-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; margin: 16px 0 26px; padding: 16px 22px; border-radius: 14px; background: linear-gradient(110deg, rgba(139,92,246,0.13) 0%, rgba(34,197,94,0.06) 100%); border: 1px solid rgba(139,92,246,0.3); }
+.ai-strip-label { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-bright); white-space: nowrap; }
+.ai-emoji { font-size: 17px; }
+.ai-tick { display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--text-2); white-space: nowrap; }
+.ai-tick::before { content: "✓"; color: var(--green-bright); font-weight: 800; }
+@media (max-width: 620px) {
+  .ai-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+  .ai-strip-label { grid-column: 1 / -1; }
+  .ai-tick { font-size: 13.5px; white-space: nowrap; }
+}
+
+/* proof box additions */
+.proof-sub { text-align: center; color: var(--text-3); font-size: 16px; margin-top: 8px; }
+.proof-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 26px; max-width: 760px; margin-left: auto; margin-right: auto; }
+@media (max-width: 600px) { .proof-stats { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; } }
+.proof-stats .stat { text-align: center; background: none; border: none; padding: 4px 6px; }
+.proof-stats .s-num { font-size: 26px; }
+.proof-stats .s-sub { font-size: 12.5px; }
+.cs-card { position: relative; }
+.cs-badge { position: absolute; top: 26px; left: 26px; z-index: 2; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; background: rgba(10,10,18,0.72); border: 1px solid rgba(139,92,246,0.55); color: var(--accent-bright); backdrop-filter: blur(4px); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+@media (max-width: 760px) { .testi-grid { grid-template-columns: 1fr; } }
+.testi { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; text-align: center; }
+.testi-stars { color: #fbbf24; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+.testi-quote { font-size: 14px; color: var(--text-2); }
+.testi-meta { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 18px; text-align: left; }
+.testi-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+.testi-name { font-size: 14px; font-weight: 700; color: var(--text); }
+.testi-role { font-size: 12.5px; color: var(--text-3); }
+/* text hyperlinks (not buttons) for the proof-box footer */
+.proof-link { display: inline-flex; align-items: center; gap: 9px; font-size: 16px; font-weight: 700; color: var(--accent-bright); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+.proof-link:hover { color: #c4b5fd; }
+.proof-link .dd-logo, .proof-link .sk-logo { width: 22px; height: 22px; border-radius: 6px; }
+.proof-link .yt-glyph { display: inline-grid; place-items: center; width: 26px; height: 18px; background: #ff0000; border-radius: 5px; }
+.proof-link .yt-glyph::after { content: ""; width: 0; height: 0; border-left: 7px solid #fff; border-top: 4.5px solid transparent; border-bottom: 4.5px solid transparent; margin-left: 1px; }
+
+footer { text-align: center; margin-top: 52px; font-size: 13px; color: var(--text-3); }
+footer a { color: var(--accent-bright); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="ambient">
+  <div class="orb"></div>
+  <div class="orb"></div>
+</div>
+
+<div class="wrap">
+
+  <!-- ────────── HEADER + MEGA DOWNLOAD ────────── -->
+  <header class="header section">
+    <span class="eyebrow">Built for Simon Clubley</span>
+    <h1>Simon, your <span class="gradient-text-green">100 hand‑picked leads</span> for The Wow Factory Kent LTD are&nbsp;ready.</h1>
+    <p class="lede">We used AI to find decision-makers in your perfect ICP. Click the button below to download now.</p>
+
+    <a class="mega-btn" href="leads.csv" download="Simon Clubley - The Wow Factory Kent LTD - 100 Leads.csv" data-track="download">
+      <div class="mb-top"><span class="mb-emoji">📥</span>Download your 100 free leads <span class="mb-value">($559 value)</span></div>
+      <div class="mb-sub">CSV &middot; name, title, company, verified email, LinkedIn</div>
+    </a>
+    <div class="meta">Prepared by Jordan Rafealov &middot; Dopamine&nbsp;Digital</div>
+    <a class="scroll-cue" href="#more">See what's inside<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+  </header>
+
+  <!-- ────────── SUMMARY ────────── -->
+  <section class="section" id="more">
+    <div class="summary-card">
+      <h2>What's in your list</h2>
+
+      <div class="stat-row stagger">
+        <div class="stat">
+          <div class="s-label">Your sample</div>
+          <div class="s-num green">100</div>
+          <div class="s-sub">Hand-picked decision-makers, fully enriched and verified, active on LinkedIn in the last 30 days.</div>
+        </div>
+        <div class="stat">
+          <div class="s-label">Total market we mapped</div>
+          <div class="s-num purple">412,000</div>
+          <div class="s-sub">UK SMEs seeking differentiated market positioning, marketing + founder decision makers</div>
+        </div>
+      </div>
+
+      <div class="ai-strip">
+        <span class="ai-strip-label"><span class="ai-emoji">📡</span> AI signals added</span>
+        <span class="ai-tick">ICP fit scored</span>
+        <span class="ai-tick">Verified data</span>
+        <span class="ai-tick">Recently active</span>
+      </div>
+
+      <p>The Wow Factory is a full-service creative agency based in Kent, co-founded by former Kent Messenger professionals, specializing in branding, web development, and digital marketing to help businesses with special ideas stand out through innovative content and social media strategies.</p>
+
+      <div class="block-label">Who these leads are</div>
+      <ul class="icp-list">
+        <li><strong>Clients requiring standout positioning</strong>, helped through compelling content that differentiates them from competitors in their markets.</li>
+        <li><strong>Organizations seeking holistic marketing partnerships</strong>, where the agency invests time understanding their specific goals and success definitions.</li>
+        <li><strong>Unverified.</strong> Scraped content did not support this claim.</li>
+      </ul>
+      <span class="source-tag">www.thewowfactory.co.uk</span>
+
+      <div class="value-line">
+        These are the exact decision-makers we'd put on your calendar. We run the entire pay-per-qualified-call engine for The Wow Factory Kent LTD, and <strong>you only pay per qualified call that actually shows up.</strong>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ────────── GODFATHER OFFER ────────── -->
+  <section class="section">
+    <div class="godfather">
+      <span class="gf-eyebrow">My godfather offer to you</span>
+      <h2>We build you an AI outbound engine that generates <span class="gradient-text-green">10 to 12 qualified sales calls</span> every month. You only pay for qualified meetings that show up.</h2>
+      <p class="gf-summary">We're not a tool or a course. We're the operator that builds, runs, and manages your entire pay-per-qualified-call engine <span class="gradient-text-green">for free</span>. We own the volume, you own the conversations.</p>
+      <div class="gf-benefits stagger">
+        <div class="gf-benefit"><strong>Done-for-you.</strong> We build, run, and manage the entire engine, from domains and inboxes to copy and reply handling.</div>
+        <div class="gf-benefit"><strong>Pay per result.</strong> You only pay for qualified calls that actually show up, never for clicks or opens.</div>
+        <div class="gf-benefit"><strong>No setup fee.</strong> Month to month with no setup cost and no contract, walk away anytime.</div>
+        <div class="gf-benefit"><strong>You set the bar.</strong> You decide what "qualified" means, so your calendar only fills with real-fit buyers.</div>
+        <div class="gf-benefit"><strong>An engine you own.</strong> The whole system is yours and fully transferable on day one, never locked in.</div>
+        <div class="gf-benefit"><strong>Proven, not theory.</strong> We run this exact engine on our own pipeline, so you know it works.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── DOPAMINE DIGITAL PROOF ────────── -->
+  <section class="section">
+    <div class="proof-box">
+      <h2 class="learn-more-head">Want to know more about <span class="gradient-text">Dopamine Digital</span>?</h2>
+      <p class="proof-sub">Who we are, who we serve, and our video case studies.</p>
+
+      <div class="proof-stats stagger">
+        <div class="stat"><div class="s-num green">$10M+</div><div class="s-sub">pipeline generated</div></div>
+        <div class="stat"><div class="s-num purple">$3M+</div><div class="s-sub">revenue closed for clients</div></div>
+        <div class="stat"><div class="s-num green">6,500+</div><div class="s-sub">YouTube subscribers</div></div>
+        <div class="stat"><div class="s-num purple">6,800</div><div class="s-sub">Skool students</div></div>
+      </div>
+
+      <div class="cs-grid stagger">
+        <div class="cs-card">
+          <a class="cs-video" href="https://www.youtube.com/watch?v=BExJ1GF4SOU" target="_blank" rel="noopener">
+            <img src="https://img.youtube.com/vi/BExJ1GF4SOU/maxresdefault.jpg" alt="CreateStudio case study" loading="lazy">
+            <span class="yt-play"></span>
+          </a>
+          <h3 class="cs-headline"><span class="gradient-text-green">Case study #1:</span> How CreateStudio grew from $200K to $600K MRR a month, then exited for $7M.</h3>
+          <ul class="cs-checks"><li>3x monthly revenue growth</li><li>Funnel rebuilt with new offer</li><li>Drove multi-7-figure exit</li></ul>
+        </div>
+        <div class="cs-card">
+          <a class="cs-video" href="https://www.youtube.com/watch?v=aY_y9TyVK2Q" target="_blank" rel="noopener">
+            <img src="https://img.youtube.com/vi/aY_y9TyVK2Q/maxresdefault.jpg" alt="Ripple case study" loading="lazy">
+            <span class="yt-play"></span>
+          </a>
+          <h3 class="cs-headline"><span class="gradient-text-green">Case study #2:</span> How Ripple closed 3 deals in just 60 days from our AI outbound engine.</h3>
+          <ul class="cs-checks"><li>3 deals closed in first 60 days</li><li>Zero investor dependency</li><li>Scalable AI growth engine</li></ul>
+        </div>
+        <div class="cs-card">
+          <a class="cs-video" href="https://www.youtube.com/watch?v=zbu8fe9pvrg" target="_blank" rel="noopener">
+            <img src="https://img.youtube.com/vi/zbu8fe9pvrg/maxresdefault.jpg" alt="Goldphish case study" loading="lazy">
+            <span class="yt-play"></span>
+          </a>
+          <h3 class="cs-headline"><span class="gradient-text-green">Case study #3:</span> How Dan went from scammed by two agencies to flooded with quality leads every day.</h3>
+          <ul class="cs-checks"><li>12+ qualified calls per month</li><li>2-3 closes per month</li><li>$6,500 LTV, predictable CAC</li></ul>
+        </div>
+      </div>
+
+      <div class="testi-grid stagger">
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"He consistently delivered exceptional work. He also contributed valuable insights to our ideation and strategy process!"</p>
+          <div class="testi-meta"><img class="testi-avatar" src="https://framerusercontent.com/images/rqQtBT3vcFtWTM2dtmvHk1zphiA.png?width=200&height=200" alt="" loading="lazy" /><div><div class="testi-name">Aal Hakim</div><div class="testi-role">Founder Dark Mattr</div></div></div>
+        </div>
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Jordan thanks for all you do! It's been a joy working together so far and stoked to see where we grow HelloCustom!"</p>
+          <div class="testi-meta"><img class="testi-avatar" src="https://framerusercontent.com/images/4vZ2WhIy5Y2dygQPNehEwXNw5g.jpg?width=200&height=200" alt="" loading="lazy" /><div><div class="testi-name">Stephen Chin</div><div class="testi-role">CEO HelloCustom</div></div></div>
+        </div>
+        <div class="testi">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"If I could give 10 stars I would. Jordan is THE BEST writer / marketer we've worked with. Capable, great communicator and sensational work."</p>
+          <div class="testi-meta"><img class="testi-avatar" src="https://framerusercontent.com/images/SxZ0ihK1qg9eVvuTF1zdp23T4.png?width=200&height=200" alt="" loading="lazy" /><div><div class="testi-name">Kris Flegg</div><div class="testi-role">Founder PDCo.</div></div></div>
+        </div>
+      </div>
+
+      <div class="gf-links stagger">
+        <div class="gf-link">
+          <a class="proof-link" href="https://dopaminedigital.io" target="_blank" rel="noopener" data-track="website"><img class="dd-logo" src="https://www.google.com/s2/favicons?domain=dopaminedigital.io&amp;sz=64" alt="Dopamine Digital" /> Visit dopaminedigital.io →</a>
+        </div>
+        <div class="gf-link">
+          <a class="proof-link" href="https://www.youtube.com/@JordanRafealov" target="_blank" rel="noopener" data-track="youtube"><span class="yt-glyph"></span> Watch on YouTube →</a>
+        </div>
+        <div class="gf-link">
+          <a class="proof-link" href="https://www.skool.com/dopaminedigital" target="_blank" rel="noopener" data-track="skool"><img class="sk-logo" src="https://www.google.com/s2/favicons?domain=skool.com&amp;sz=64" alt="Skool" /> Join the Skool →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── CTA BOX ────────── -->
+  <section class="section">
+    <div class="cta-box">
+      <span class="cb-eyebrow">Your custom growth plan</span>
+      <h2>Want a <span class="gradient-text-green">custom growth plan</span> to see how this would work for The Wow Factory Kent LTD?</h2>
+      <p class="cb-offer">Book a free, no-obligation fit-check call. I'll ask you about your numbers, show you exactly how the engine would work for The Wow Factory Kent LTD, and whether or not it's a fit, you'll walk away with a custom plan either way. Click the button below now.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary cta-book" href="https://calendly.com/jordan-dopaminedigital/30-min-strategy-call?utm_source=lead_magnet&utm_medium=one_pager&utm_campaign=100_leads&utm_content=the-wow-factory-kent-ltd" target="_blank" rel="noopener" data-track="book"><span>Book your free fit-check call →</span></a>
+      </div>
+      <div class="cta-proof"><span class="cta-stars">★★★★★</span><span>Trusted by <strong>seven-figure founders</strong></span></div>
+      <div class="cta-or">No-obligation. Not useful? I'll send you a <strong><span class="voucher-amt">$25</span> <img class="amzn-logo" src="https://www.google.com/s2/favicons?domain=amazon.com&amp;sz=64" alt="Amazon" /> Amazon voucher</strong> for the quick call.</div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://dopaminedigital.io">Dopamine Digital</a> &middot; built for Simon Clubley &middot; <a href="mailto:jordan@dopaminedigital.io">jordan@dopaminedigital.io</a>
+  </footer>
+
+</div>
+
+<!-- Mobile-only sticky CTA: slides up past the hero, hides once the real CTA is on screen. -->
+<div class="sticky-bar" id="sticky-bar">
+  <a class="sticky-cta" href="https://calendly.com/jordan-dopaminedigital/30-min-strategy-call?utm_source=lead_magnet&utm_medium=one_pager&utm_campaign=100_leads&utm_content=the-wow-factory-kent-ltd" target="_blank" rel="noopener" data-track="book">Book your free fit-check call now →</a>
+</div>
+
+<script>
+// Mobile sticky CTA: reveal after the hero, hide once the real CTA box is on screen.
+(function () {
+  const bar = document.getElementById('sticky-bar');
+  const cta = document.querySelector('.cta-box');
+  if (!bar) return;
+  let ctaVisible = false;
+  function update() {
+    if (window.scrollY > 480 && !ctaVisible) bar.classList.add('show');
+    else bar.classList.remove('show');
+  }
+  if (cta && 'IntersectionObserver' in window) {
+    new IntersectionObserver((e) => { ctaVisible = e[0].isIntersecting; update(); }, { threshold: 0.2 }).observe(cta);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// Scroll-triggered reveal: every .section fades + slides up on first viewport hit.
+(function () {
+  const sections = document.querySelectorAll('.section');
+  if (!('IntersectionObserver' in window)) { sections.forEach(s => s.classList.add('in-view')); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
+  }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
+  sections.forEach(s => io.observe(s));
+})();
+
+// Button click tracking: each [data-track] element beacons /track (same session id as the gate)
+// so opens, unlocks, downloads, and every button click land in #audit-logs + Telegram.
+(function () {
+  function sid(){ try{ var s=sessionStorage.getItem('dd_sid'); if(!s){ s=Math.random().toString(36).slice(2,8); sessionStorage.setItem('dd_sid',s);} return s; }catch(e){ return ''; } }
+  document.querySelectorAll('[data-track]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      try {
+        var u = 'https://docs.dopaminedigital.io/track?event=' + encodeURIComponent(el.getAttribute('data-track'))
+          + '&slug=' + encodeURIComponent(location.hostname + location.pathname)
+          + '&title=' + encodeURIComponent(document.title || '')
+          + '&sid=' + encodeURIComponent(sid());
+        if (navigator.sendBeacon) { navigator.sendBeacon(u); } else { new Image().src = u; }
+      } catch (e) {}
+    }, { passive: true });
+  });
+})();
+
+// Case-study videos play inline (click-to-load YouTube embed; falls back to the link if JS is off).
+(function () {
+  document.querySelectorAll('.cs-video').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const m = (el.getAttribute('href') || '').match(/[?&]v=([^&]+)/);
+      if (!m) return;
+      const ifr = document.createElement('iframe');
+      ifr.src = 'https://www.youtube.com/embed/' + m[1] + '?autoplay=1&rel=0';
+      ifr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      ifr.setAttribute('allowfullscreen', '');
+      ifr.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;';
+      el.innerHTML = '';
+      el.appendChild(ifr);
+    });
+  });
+})();
+
+</script>
+
+</body>
+</html>
